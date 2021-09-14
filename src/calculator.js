@@ -1,28 +1,23 @@
-function add(a, b) 
-{
+function add(a, b) {
     return a + b;
 }
 
-function subtract(a, b) 
-{
+function subtract(a, b) {
     return a - b;
 }
 
-function divide(a, b) 
-{
+function divide(a, b) {
     return a / b;
 }
 
-function multiply(a, b)
-{
+function multiply(a, b){
     return a * b;
 }
 
-function menu() 
-{
+function menu() {
     let opcion = 0;
-    while (opcion < 1 || opcion > 6)
-    {
+    
+    while (opcion < 1 || opcion > 6) {
         console.log("Que operacion quiere hacer?");
         console.log("\t1 - Sumar");
         console.log("\t2 - Restar");
@@ -36,22 +31,19 @@ function menu()
     return opcion;
 }
 
-function main()
-{
+function main() {
     let resultado = 0;
     opcion = menu();
-    while (opcion !== 6)
-    {
+
+    while (opcion !== 6) {
         console.log("Resultado: ", resultado);
         res = 0;
 
-        if (resultado == 0)
-        {
+        if (resultado == 0) {
             resultado = parseFloat(prompt("Primer valor: "));
         }
         
-        switch (opcion)
-        {
+        switch (opcion) {
             case 1:
                 res = add(resultado, parseFloat(prompt("Valor a sumar: ")));
                 resultado = res;
@@ -77,6 +69,7 @@ function main()
                 resultado = res;
             break;
         }
+
         console.log("Resultado: ", resultado)
         opcion = menu();
     }
